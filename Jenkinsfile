@@ -9,7 +9,7 @@ node {
        sh 'mvn clean compile'
      }
    }
-   stage('SonarScan') {
+   stage('Code Analysis') {
       //withSonarQubeEnv('SonarQube') {
          //withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
              //sh 'mvn clean package sonar:sonar' 
@@ -19,9 +19,9 @@ node {
             // ' -Dsonar.organization=itrainavengers ' +
             // ' -Dsonar.login=c9515e84f9117ab6e598d26c34877938f72481a6 '   
          //}
-       withSonarQubeEnv('SonarQube') {
+       //withSonarQubeEnv('SonarQube') {
            //sh 'mvn clean package org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
-           sh 'mvn clean package sonar:sonar'
+           //sh 'mvn clean package sonar:sonar'
            
       }
    }
